@@ -1,0 +1,221 @@
+.body{
+    background: rgb(248, 247, 255);
+    width: 100%;
+    padding: 24px;
+}
+.grid{
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px, auto));
+    grid-auto-flow: dense;
+    gap: 24px;
+    align-items: start;
+    grid-auto-rows: minmax(162px, auto);
+}
+article{
+    background: white;
+}
+.row-2{
+    grid-row: span 2;
+}
+.perfil,
+.skills,
+.Education,
+.Experience{
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+}
+.skills{
+    overflow: hidden;
+}
+.profile{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.profile-name{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(17, 19, 40);
+}
+.skills{
+    flex-grow: 1;
+
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.career{
+    color: rgb(184, 185, 193);
+    font-size: 14px;
+}
+.subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(17, 19, 40);
+    margin-bottom: 1rem;
+}
+.description{
+    color: rgb(140, 141, 150);
+    font-size: 15px;
+}
+.mt-1{
+    margin-top: 1rem;
+}
+.mb-1{
+    margin-bottom: 1rem;
+}
+.social{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem;
+    font-size: 15px;
+}
+.tag{
+    display: flex;
+    gap: 6px;
+    color:rgb(17, 19, 40);
+    background-image: linear-gradient(145deg, rgb(255, 210, 8), rgb(174, 255, 0));
+    max-width: max-content;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+.tag > a{
+    color: inherit;
+    font-weight: 600;
+    text-shadow: 0px 0px 2px black;
+    color:rgb(255, 255, 255);
+
+}
+.social > article{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.social > article > i{
+    font-size: 2.5rem;
+}
+.social > article > a{
+    color: rgb(140, 141, 150);
+    font-weight: 500;
+
+}
+.social > article:nth-child(1) > i{
+    color: rgb(0, 123, 255);
+}
+
+.social > article:nth-child(2) > i{
+    background: linear-gradient(145deg, rgb(74, 119, 255) -3%,rgb(255, 191, 0),rgb(221, 0, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.social > article:nth-child(3) > i{
+    color: blueviolet;
+}
+.social > article:nth-child(4) > i{
+    color: rgb(72, 72, 255);
+}
+.slider {
+    width: 100%;
+    height: calc(var(--font-size));
+    mask-image: linear-gradient(90deg, transparent,#000, transparent);
+}
+.slider > .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--font-size) * var(--quantity));
+    position: relative;
+    gap: 1rem;
+}
+.slider > .list > div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: .5rem;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc((10s / var(--quantity) * (var(--position) - 1)));
+    width: var(--font-size);
+    height: var(--font-size);
+
+}
+.slider > .list > div > i{
+    font-size: 64px;
+}
+@keyframes autoRun {
+    from{
+        left: 100%;
+    }
+    to{
+        left: calc(var(--font-size) * -1);
+    }
+}
+.slider > .list > div{
+    filter: grayscale(100%);
+}
+.slider > .list > div:nth-child(1) > i{
+    color: rgb(255, 162, 0);
+}
+.slider > .list > div:nth-child(2) > i{
+    color: rgb(0, 110, 255);
+}
+.slider > .list > div:nth-child(3) > i{
+    color: rgb(17, 202, 4);
+}
+.slider > .list > div:nth-child(4) > i{
+    color: rgb(255, 0, 111);
+}
+.slider > .list > div:nth-child(5) > i{
+    color: rgb(255, 225, 0);
+}
+.slider > .list > div:nth-child(6) > i{
+    color: rgb(0, 98, 255);
+}
+.slider > .list > div:nth-child(7) > i{
+    color: rgb(34, 0, 255);
+}
+.slider > .list > div:nth-child(8) > i{
+    color: rgb(0, 0, 0);
+}
+.slider > .list > div:nth-child(9) > i{
+    color: rgb(255, 136, 0);
+}
+.slider:hover >.list > div{
+    animation-play-state: paused;
+}
+.slider:hover >.list > div:hover{
+    filter: unset;
+    }
+
+
+.slider > .list > div:nth-child(10) > i{
+    background-image: linear-gradient(145deg, rgb(128, 0, 255) 10%, orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation-play-state: paused;
+}
+.Education__list-item{
+    display: flex;
+    gap: 1rem;
+}
+.date{
+    white-space: nowrap;
+}
+.description__title > b{
+    font-weight: bold;
+    color:rgb(17, 19, 40);
+}
+.description__tag{
+    color: rgb(140, 141, 150);
+}
